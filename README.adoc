@@ -1,0 +1,73 @@
+= Asciidoctor Preview
+:author: hituzi no sippo
+:email: contact@hituzi-no-sippo.me
+:revnumber: v1.0.0
+:revdate: 2021-10-05T16:03:40+0900
+:revremark: First Edition
+:doctype: article
+:description:
+:title:
+:experimental:
+:showtitle:
+:!sectnums:
+:sectids:
+:toc: preamble
+:sectlinks:
+:sectanchors:
+:idprefix:
+:idseparator: -
+:xrefstyle: full
+:!example-caption:
+:!figure-caption:
+:!table-caption:
+:!listing-caption:
+ifdef::env-github[]
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+:copyright: Copyright (c) 2021 {author}
+
+:first-publication-date: 2021-10-05T16:03:40+0900
+:creation-date: 2021-10-05T15:00:52+0900
+
+:copyright-with-author-link: Copyright (c) 2021 link:https://github.com/hituzi-no-sippo[{author}^]
+:github-profile-url: https://github.com/hituzi-no-sippo
+:project-name: asciidoctor-preview
+:repository-url: {github-profile-url}/{project-name}
+
+== Setup
+
+. Clone this repository +
+  `git clone {repository-url}`
+. Install npm packages
++
+--
+[source, bash, subs='attributes']
+----
+cd {project-name}
+npm install
+----
+--
+. Create asciidoc file to `asciidoc` directory
++
+--
+[source, bash, subs='attributes']
+----
+mkdir asciidoc
+echo 'link:{repository-url}[Asciidoctor Preview^]' > asciidoc/index.adoc
+----
+--
+. Boot preview server +
+  `npm run preview`
+. Check the browser page is automatically updated on change the asciidoc file
+
+// tag::copyright[]
+
+'''
+
+{copyright-with-author-link}
+
+// end::copyright[]

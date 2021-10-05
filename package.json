@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "asciidoctor": "^2.2.5"
+  },
+  "scripts": {
+    "convert": "find ./asciidoc/ -type f -name '*.adoc' -not -path '*/node_modules/*' -exec asciidoctor {} +",
+    "remove-html": "find ./asciidoc/ -type f -name '*.html' -not -path '*/node_modules/*' -delete"
+  }
+}
